@@ -2,95 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* CLIMAX Dark Theme - Primary theme for government dashboard */
+    --background: 222 47% 11%;
+    --foreground: 220 13% 91%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 39% 10%;
+    --card-foreground: 220 13% 91%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 39% 10%;
+    --popover-foreground: 220 13% 91%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 44 95% 48%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 39% 15%;
+    --secondary-foreground: 220 13% 91%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 39% 18%;
+    --muted-foreground: 218 11% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 44 95% 48%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 352 76% 50%;
+    --destructive-foreground: 220 13% 91%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 26% 20%;
+    --input: 220 26% 20%;
+    --ring: 44 95% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Risk Level Colors */
+    --risk-high: 352 76% 50%;
+    --risk-medium: 38 92% 50%;
+    --risk-low: 142 72% 37%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Status Colors */
+    --status-active: 142 72% 37%;
+    --status-warning: 38 92% 50%;
+    --status-critical: 352 76% 50%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Custom gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(44 95% 48%) 0%, hsl(38 92% 50%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 39% 12%) 0%, hsl(222 47% 11%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 39% 12%) 0%, hsl(220 39% 8%) 100%);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Shadows */
+    --shadow-card: 0 4px 24px -4px hsla(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 20px -5px hsl(44 95% 48% / 0.3);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 39% 8%;
+    --sidebar-foreground: 220 13% 91%;
+    --sidebar-primary: 44 95% 48%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 220 39% 15%;
+    --sidebar-accent-foreground: 220 13% 91%;
+    --sidebar-border: 220 26% 18%;
+    --sidebar-ring: 44 95% 48%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 222 47% 11%;
+    --foreground: 220 13% 91%;
+    --card: 220 39% 10%;
+    --card-foreground: 220 13% 91%;
+    --popover: 220 39% 10%;
+    --popover-foreground: 220 13% 91%;
+    --primary: 44 95% 48%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 220 39% 15%;
+    --secondary-foreground: 220 13% 91%;
+    --muted: 220 39% 18%;
+    --muted-foreground: 218 11% 65%;
+    --accent: 44 95% 48%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 352 76% 50%;
+    --destructive-foreground: 220 13% 91%;
+    --border: 220 26% 20%;
+    --input: 220 26% 20%;
+    --ring: 44 95% 48%;
   }
 }
 
@@ -100,6 +93,60 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply relative overflow-hidden rounded-xl border border-border/50 bg-card p-6;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .stat-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.05) 0%, transparent 50%);
+  }
+
+  .stat-card:hover::before {
+    @apply opacity-100;
+  }
+
+  .risk-badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+  }
+
+  .risk-badge-high {
+    @apply bg-[hsl(var(--risk-high)/0.15)] text-[hsl(var(--risk-high))];
+  }
+
+  .risk-badge-medium {
+    @apply bg-[hsl(var(--risk-medium)/0.15)] text-[hsl(var(--risk-medium))];
+  }
+
+  .risk-badge-low {
+    @apply bg-[hsl(var(--risk-low)/0.15)] text-[hsl(var(--risk-low))];
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
   }
 }
